@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang = "en">
+<meta charset=" UTF-8">
+<!-- Head: Header part-->
+<head>
+<title>Anh Pham's Portfolio</title> <!-- Title sets the Title-->
+
+<!-- Style: Prettify the look of the webpage -->
+<link rel="stylesheet" href="">
+
+<!-- Link Style with the same class-->
+<style>   
+#navbar { 
+    background-color: grey; 
+    overflow: hidden; 
+}
+#navbar a {
+    float:left;
+    display:block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px ;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover{
+    background-color: #ddd;
+    color:black;
+}
+
+#navbar a.active {
+    background-color: green;
+    color: white;
+}
+.content {
+    padding:16px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+
+body {
+    margin: 0;
+    font-size: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    background-color: beige;
+    border: #111010;
+    border-style: solid;
+    padding: 14px;
+}
+
+h1 {
+color:#111010;
+padding: 30px;
+text-align: center;
+margin-top: 20px;
+}
+
+.flex-container {
+    display: flex;
+    background-color: lightblue;
+    border-style: solid;
+}
+
+.flex-container div {
+background-color: #ffffff;
+margin: 10px;
+padding: 20px;
+font-size: 30px;
+-ms-flex: 1;
+flex:1;
+text-align: center;
+}
+.flex-container img {
+    width: 180px;
+    height: 180px;
+}
+
+
+/* Gradient */
+.css-selector {
+    background: linear-gradient(219deg, #12e9b2, #ffffff, #e56868, #68c5e5);
+    background-size: 800% 800%;
+
+    -webkit-animation: GradientBG 59s ease infinite;
+    -moz-animation: GradientBG 59s ease infinite;
+    animation: GradientBG 59s ease infinite;
+}
+
+@-webkit-keyframes GradientBG {
+    0%{background-position:14% 0%}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0%}
+}
+@-moz-keyframes GradientBG {
+    0%{background-position:14% 0%}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0%}
+}
+@keyframes GradientBG {
+    0%{background-position:14% 0%}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0%}
+}
+</style>
+</head>
+
+<!-- Body: Body part -->
+<body class="css-selector">
+<div  id="navbar">
+ <a class="button active" href="#home">Home</a>
+ <a class = "button" href="#about">About Me</a>  
+ <a class = "button" href="#project">Projects</a> 
+ <a class = "button" href="#contact">Contacts</a>
+
+</div>
+
+<h1 id="home">Welcome to Anh Pham's Portfolio Page</h1>
+<h1 id="about">About Me</h1>
+<p>My name is Anh Pham. A Vietnamese Student, currently intern at FPT Software for 2024 Summer. I am looking forward to make amazing projects and boarden my skills through this internship. This portoflio is to save and show projects about what I've learn during FPT Software Internship.</p>
+
+<div class="flex-container">
+    <div>Education
+            <div >3rd Year in University of Maryland</div>
+            <img src="https://umd-brand.transforms.svdcdn.com/production/uploads/images/logos-formal-seal.jpg?w=1801&h=1801&auto=compress%2Cformat&fit=crop&dm=1651267392&s=81a14f930f7888983f0f8bc10146c0b2">
+    </div>
+    <div>Achievements
+        <div style="padding-top: 70px;"> Bethesda Cybersecurity Contest Semifinalist</div>
+    </div>
+    <div>Hobby
+        <ul style="padding-top: 70px;">
+            <li>Programming</li>
+            <li>Cooking</li>
+            <li>Gaming</li>
+        </ul>
+    </div>
+</div>
+<h1 id="project">Current Internship Project</h1>
+<div class ="flex-container">
+ <div>1</div>  
+ <div>2</div>  
+ <div>3</div>   
+</div>
+
+<div class ="flex-container">
+    <div>4</div>  
+    <div>5</div>   
+    <div>6</div> 
+</div>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+<!-- Script: Custom Scripts-->
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    // nav bar
+    var navbar = document.getElementById("navbar");
+    
+    //get the offset position of navbar
+    var sticky = navbar.offsetTop;
+    
+    //Add the sticky class to the navbar when you reach the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky){
+            navbar.classList.add("sticky")
+        }
+        else {
+            navbar.classList.remove("Sticky");
+        }
+    }
+
+// This is for navigation
+    var navContainer = document.getElementById("navbar");
+    var buttons = navContainer.getElementsByClassName("button");
+
+    for(var i = 0; i <buttons.length; i++){
+        buttons[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active","");
+            this.className += " active";
+        });
+    }
+    </script>
+
+</body>
+</html>
