@@ -10,6 +10,10 @@
 
 <!-- Link Style with the same class-->
 <style>   
+
+html{
+    scroll-behavior: smooth;
+}
 #navbar { 
     background-color: grey; 
     overflow: hidden; 
@@ -65,10 +69,11 @@ text-align: center;
 margin-top: 20px;
 }
 
+
 .flex-container {
     display: flex;
     background-color: lightblue;
-    border-style: solid;
+    
 }
 
 .flex-container div {
@@ -80,9 +85,25 @@ font-size: 30px;
 flex:1;
 text-align: center;
 }
+
+.flex-container p {
+background-color: #ffffff;
+font-size: 15px;
+-ms-flex: 1;
+flex:1;
+text-align: center;
+border-style: none;
+}
+
 .flex-container img {
     width: 180px;
     height: 180px;
+}
+
+.special {
+    border-radius: 25px;
+    width: 100px;
+    height: 150px;
 }
 
 
@@ -124,10 +145,9 @@ text-align: center;
 
 </div>
 
-<h1 id="home">Testing 123</h1>
+<h1 id="home">Quang Anh's Portfolio</h1>
 <h1 id="about">About Me</h1>
-<p>My name is Anh Pham. A Vietnamese Student, currently intern at FPT Software for 2024 Summer. I am looking forward to make amazing projects and boarden my skills through this internship. This portoflio is to save and show projects about what I've learn during FPT Software Internship.</p>
-
+<p>My name is Pham Nguyen Quang Anh (Anh Pham in the US). A Vietnamese Student, currently intern at FPT Software for 2024 Summer. I am looking forward to make amazing projects and boarden my skills through this internship. This portoflio is to save and show projects about what I've learn during FPT Software Internship.</p>
 <div class="flex-container">
     <div>Education
             <div >3rd Year in University of Maryland</div>
@@ -146,18 +166,18 @@ text-align: center;
 </div>
 <h1 id="project">Current Internship Project</h1>
 <div class ="flex-container">
- <div>1</div>  
- <div>2</div>  
- <div>3</div>   
+<div class="special"> <a href="#home">Portfolio</a>
+<p>HTML and CSS</p>
+</div>
+ <div class="special">2</div>  
+ <div class="special">3</div> 
 </div>
 
 <div class ="flex-container">
-    <div>4</div>  
-    <div>5</div>   
-    <div>6</div> 
-</div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <div class="special">1</div>  
+    <div class="special">2</div>  
+    <div class="special">3</div> 
+   </div>
 
 <!-- Script: Custom Scripts-->
 <script>
